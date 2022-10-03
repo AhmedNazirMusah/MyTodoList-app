@@ -1,0 +1,95 @@
+.todo-list {
+  flex-direction: column;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.397);
+  box-shadow: 0.1px 1px 10px 5px black;
+  padding: 10px;
+  height: 100%;
+  margin: 15% 20%;
+}
+
+.todo-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.388);
+}
+
+.todo-input {
+  border: none;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.388);
+  display: inline-block;
+  width: 92.3%;
+}
+
+.todo-form-group {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.388);
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+
+  /* gap: 16px; */
+  list-style: none;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+}
+
+button {
+  background: none;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(201, 182, 182, 0.888);
+}
+
+button:hover {
+  background-color: rgb(227, 98, 98);
+  transition: 0.5s all ease-in-out;
+}
+
+.dots {
+  color: black;
+}
+
+.r-div {
+  grid-gap: 3%;
+  display: grid;
+  grid-template-columns: 85% 5% 5%;
+  align-items: center;
+}
+
+label {
+  width: 80%;
+}
+
+.i-div label {
+  display: flex;
+  column-gap: 15px;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.place-input {
+  height: 40px;
+  border: none;
+  margin-top: 2px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.place-input:hover {
+  background-color: bisque;
+  transition: 0.5s all ease-in-out;
+}
+
+.del:hover {
+  color: brown;
+}
