@@ -6,7 +6,7 @@ const deletefun = () => {
   if (todolist[0] === null) return;
   const edit = document.querySelectorAll('.place-input');
   edit.forEach((trigger) => {
-    trigger.addEventListener('keyup', (e) => {
+    trigger.addEventListener('click', (e) => {
       trigger.removeAttribute('readonly');
       if (e.key === 'Enter') {
         todolist[trigger.id].description = trigger.value;

@@ -1,6 +1,6 @@
 import { todolist, input } from './delete.js';
 
-const addBook = () => {
+const addTodo = () => {
   const task = {
     description: input.value,
     completed: false,
@@ -11,4 +11,4 @@ const addBook = () => {
   window.location.reload();
 };
 
-export default addBook;
+export default addTodo;

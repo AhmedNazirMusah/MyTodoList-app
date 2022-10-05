@@ -1,5 +1,5 @@
 import './style.css';
-import addBook from './addbook.js';
+import addTodo from './todo.js';
 import {
   deletefun, todolist, input,
 } from './delete.js';
@@ -26,7 +26,7 @@ input.addEventListener('keyup', (e) => {
   const userInput = input.value;
   if (e.key === 'Enter' && userInput) {
     if (input.value !== '') {
-      addBook();
+      addTodo();
     }
   }
 });
