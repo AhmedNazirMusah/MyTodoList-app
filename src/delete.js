@@ -1,5 +1,4 @@
 const todolist = JSON.parse(localStorage.getItem('list')) || [];
-export const forms = document.querySelector('.todo-form');
 export const input = document.querySelector('.todo-input');
 export const clear = document.querySelector('.submit');
 
@@ -7,7 +6,7 @@ const deletefun = () => {
   if (todolist[0] === null) return;
   const edit = document.querySelectorAll('.place-input');
   edit.forEach((trigger) => {
-    trigger.addEventListener('keyup', (e) => {
+    trigger.addEventListener('click', (e) => {
       trigger.removeAttribute('readonly');
       if (e.key === 'Enter') {
         todolist[trigger.id].description = trigger.value;
@@ -22,7 +21,7 @@ const deletefun = () => {
       if (e.target.checked) {
         todolist[boox.id].completed = true;
         boox.parentElement.lastElementChild.classList.add('checked');
-      } else if (!e.target.checked) {
+      } else {
         todolist[boox.id].completed = false;
         boox.parentElement.lastElementChild.classList.remove('checked');
       }
@@ -34,8 +33,8 @@ const deletefun = () => {
   const itemz = [...singledelete];
   itemz.forEach((deletebtn) => {
     deletebtn.addEventListener('click', () => {
-      todolist[deletebtn.id].completed = true;
-      const onedelete = todolist.filter((todo) => todo.completed === false);
+      todolist[deletebtn.id].single = true;
+      const onedelete = todolist.filter((todo) => todo.single !== true);
       localStorage.setItem('list', JSON.stringify(onedelete));
       window.location.reload();
     });
