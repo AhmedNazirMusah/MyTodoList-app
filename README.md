@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://ahmednazirmusah.github.io/To-Do-LIST/dist/)
+[Live Demo Link](https://ahmednazirmusah.github.io/MyTodoList-app/dist/)
 
 
 ## Getting Started
