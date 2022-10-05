@@ -22,7 +22,7 @@ const deletefun = () => {
       if (e.target.checked) {
         todolist[boox.id].completed = true;
         boox.parentElement.lastElementChild.classList.add('checked');
-      } else if (!e.target.checked) {
+      } else {
         todolist[boox.id].completed = false;
         boox.parentElement.lastElementChild.classList.remove('checked');
       }
@@ -34,8 +34,8 @@ const deletefun = () => {
   const itemz = [...singledelete];
   itemz.forEach((deletebtn) => {
     deletebtn.addEventListener('click', () => {
-      todolist[deletebtn.id].completed = true;
-      const onedelete = todolist.filter((todo) => todo.completed === false);
+      todolist[deletebtn.id].single = true;
+      const onedelete = todolist.filter((todo) => todo.single !== true);
       localStorage.setItem('list', JSON.stringify(onedelete));
       window.location.reload();
     });

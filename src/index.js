@@ -20,6 +20,7 @@ const populate = () => {
 };
 
 populate();
+
 input.addEventListener('keyup', (e) => {
   const userInput = input.value;
   if (e.key === 'Enter' && userInput) {
@@ -30,3 +31,5 @@ input.addEventListener('keyup', (e) => {
 });
 
 deletefun();
+
+export default populate;
