@@ -1,9 +1,10 @@
 import './style.css';
 import addBook from './addbook.js';
 import {
-  deletefun, todolist, forms, input,
+  deletefun, todolist, input,
 } from './delete.js';
 
+const forms = document.querySelector('.todo-form');
 const populate = () => {
   todolist.forEach((item, id) => {
     forms.innerHTML += `<div class="todo-form-group r-div" id="${id}">
