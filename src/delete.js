@@ -1,5 +1,4 @@
 const todolist = JSON.parse(localStorage.getItem('list')) || [];
-export const forms = document.querySelector('.todo-form');
 export const input = document.querySelector('.todo-input');
 export const clear = document.querySelector('.submit');
 
