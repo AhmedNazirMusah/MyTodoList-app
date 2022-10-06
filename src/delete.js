@@ -5,9 +5,13 @@ export const clear = document.querySelector('.submit');
 const deletefun = () => {
   if (todolist[0] === null) return;
   const edit = document.querySelectorAll('.place-input');
+  edit.forEach((space) => {
+    space.addEventListener('click', () => {
+      space.removeAttribute('readonly');
+    });
+  });
   edit.forEach((trigger) => {
-    trigger.addEventListener('click', (e) => {
-      trigger.removeAttribute('readonly');
+    trigger.addEventListener('keyup', (e) => {
       if (e.key === 'Enter') {
         todolist[trigger.id].description = trigger.value;
         localStorage.setItem('list', JSON.stringify(todolist));
